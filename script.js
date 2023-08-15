@@ -21,11 +21,14 @@ adicionarBotao.addEventListener("click", function () {
 
 listaTarefas.addEventListener("click", function (evento) {
     if (evento.target.classList.contains("botao-remover")) {
-        evento.target.parentElement.remove();        
-    }    
+        evento.target.parentElement.remove();
+    } else if (evento.target.tagName === "INPUT" && evento.target.type === "checkbox") {
+        const tarefaTexto = evento.target.nextElementSibling;
+        evento.target.checked ? "line-through" : "none";
+    }
 })
 
-novaTarefa.addEventListener("keyup", function(event) {
+novaTarefa.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
         adicionarBotao.click();
     }
