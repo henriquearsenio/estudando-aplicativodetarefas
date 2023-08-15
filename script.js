@@ -7,8 +7,10 @@ adicionarBotao.addEventListener("click", function () {
     if (tarefaTexto !== "") {
         const tarefaLi = document.createElement("li");
         tarefaLi.innerHTML = `
-            <input type="checkbox">
-            <span>${tarefaTexto}</span>
+            <div>
+                <input type="checkbox">
+                <span>${tarefaTexto}</span>
+            </div>
             <button class="remover">Remover</button>
         `;
         listaTarefas.appendChild(tarefaLi);
