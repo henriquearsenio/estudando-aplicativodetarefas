@@ -24,7 +24,7 @@ listaTarefas.addEventListener("click", function (evento) {
         evento.target.parentElement.remove();
     } else if (evento.target.tagName === "INPUT" && evento.target.type === "checkbox") {
         const tarefaTexto = evento.target.nextElementSibling;
-        evento.target.checked ? "line-through" : "none";
+        evento.target.checked ? tarefaTexto.style.textDecoration = "line-through" : tarefaTexto.style.textDecoration = "none";
     }
 })
 
