@@ -33,3 +33,24 @@ body {
     border-radius: 3px;
     cursor: pointer;
 }
+
+#listaTarefas {
+    list-style-type: none;
+    padding: 0;
+}
+
+#listaTarefas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#listaTarefas li:last-child {
+    border-bottom: none;
+}
+
+#listaTarefas input[type="checkbox"] {
+    margin-right: 10px;
+}
