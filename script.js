@@ -3,7 +3,7 @@ const adicionarBotao = document.getElementById("adicionar");
 const listaTarefas = document.getElementById("listaTarefas");
 
 adicionarBotao.addEventListener("click", function () {
-    const tarefaTexto = novaTarefa.trim();
+    const tarefaTexto = novaTarefa.value.trim();
     if (tarefaTexto !== "") {
         const tarefaLi = document.createElement("li");
         tarefaLi.innerHTML = `
