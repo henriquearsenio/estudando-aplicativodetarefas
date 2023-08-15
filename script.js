@@ -11,15 +11,22 @@ adicionarBotao.addEventListener("click", function () {
                 <input type="checkbox">
                 <span>${tarefaTexto}</span>
             </div>
-            <button class="remover">Remover</button>
+            <button class="botao-remover">Remover</button>
         `;
         listaTarefas.appendChild(tarefaLi);
         novaTarefa.value = "";
+        novaTarefa.focus();
     }
 });
 
 listaTarefas.addEventListener("click", function (evento) {
-    if (evento.target.classList.contains("remover")) {
+    if (evento.target.classList.contains("botao-remover")) {
         evento.target.parentElement.remove();        
     }    
 })
+
+novaTarefa.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        adicionarBotao.click();
+    }
+});
